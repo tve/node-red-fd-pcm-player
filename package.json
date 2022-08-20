@@ -1,0 +1,31 @@
+{
+  "name": "@flexdash/node-red-fd-pcm-player",
+  "version": "0.0.7",
+  "description": "A Node-RED node with a PCM audio player for FlexDash.",
+  "dependencies": {
+      "@flexdash/node-red-flexdash": ">=0.3.0"
+  },
+  "author": "Thorsten von Eicken",
+  "license": "MIT",
+  "keywords": [ "dashboard", "flexdash", "node-red", "example" ],
+  "bugs": {
+    "url":"https://github.com/flexdash/node-red-fd-pcm-player/issues"
+  },
+  "homepage":"https://github.com/flexdash/node-red-fd-pcm-player#README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flexdash/node-red-fd-pcm-player.git"
+  },
+  "node-red": {
+    "version": ">2.0.0",
+    "nodes": {
+      "fd pcm-player": "pcm-player.js"
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
