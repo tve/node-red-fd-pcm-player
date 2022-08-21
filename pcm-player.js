@@ -23,14 +23,15 @@ module.exports = function (RED) {
     "default": null,
     "default_html": null
   },
-  "data": {
-    "name": "data",
-    "name_text": "Data",
-    "name_kebab": "data",
-    "tip": "PCM audio data. ",
+  "stream": {
+    "name": "stream",
+    "name_text": "Stream",
+    "name_kebab": "stream",
+    "tip": "PCM audio stream buffers. ",
     "default": null,
     "default_html": null,
-    "input_type": "any"
+    "type": "array",
+    "input_type": "json"
   },
   "source": {
     "name": "source",
@@ -76,15 +77,15 @@ module.exports = function (RED) {
       }
       // prepare update of widget props
       const props = Object.assign({}, msg) // shallow clone
-      // msg.payload is interpreted as setting the data prop
-      if ('data' && 'payload' in msg) props['data'] = msg.payload
+      // msg.payload is interpreted as setting the  prop
+      if ('' && 'payload' in msg) props[''] = msg.payload
       // delete fields that we don't want to pass to the widget, setProps ignores ones with leading _
       for (const p of ['topic', 'payload']) delete props[p]
       widget.setProps(msg.topic, props)
     })
 
     // handle widget input messages, we receive the payload sent by the widget
-    if (false) {
+    if (true) {
       widget.onInput((topic, payload, socket) => {
         // propagate the payload into the flow and attach the FD socket ID
         let msg = { payload: payload, _flexdash_socket: socket }
