@@ -37,6 +37,7 @@ have the following fields:
 - \`data\`: the audio data as a typed array, e.g. Int8Array, Int16Array, Int32Array, or Float32Array.
 - \`rate\`: the sample rate of the audio data, e.g. 44100.
 - \`channels\`: the number of channels of the audio data, e.g. 1 for mono, 2 for stereo.
+- \`format\`: audio sample format: 'Int8', 'Int16', 'Int32', or 'Float32'.
 
 Whenever the audio player starts playing a buffer or finishes playing the last buffer it
 outputs a message with:
